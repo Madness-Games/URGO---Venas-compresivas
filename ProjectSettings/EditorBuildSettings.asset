@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/02_Vena.unity
     guid: 4cfc2c309d7f26144898e0c9e11859ce
+  - enabled: 1
+    path: Assets/01_Scenes/03_Microcirculacio.unity
+    guid: e26f45f71305f354da87f4eee83113ff
   m_configObjects: {}

@@ -183,12 +183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3a81d22523ab046aca466475d66ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneTitle: VENAS
-  sliderMinValue: 0.5
-  sliderMaxValue: 0.75
+  SceneTitle: "MICROCIRCULACI\xD3N"
+  sliderMinValue: 0.75
+  sliderMaxValue: 1
   cameraCtrl: {fileID: 961739754}
-  nextScene: 03_Microcirculacio
-  previousScene: 01_MainScene
+  nextScene: 
+  previousScene: 02_Vena
 --- !u!4 &465572192
 Transform:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 4b29e68c437a7b24fb9c769c27949039, type: 2}
+  m_Texture: {fileID: 8400000, guid: fcc9c56c93e34be41a19795dac1745e2, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0

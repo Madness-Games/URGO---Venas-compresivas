@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public SceneType currentSceneType;
     private CurrentSceneManager currentScene;
+    [SerializeField] private MenuManager menu;
     [SerializeField] private Slider slider;
 
     private void Awake()
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public void SetScene(CurrentSceneManager _sceneManager)
     {
         currentScene = _sceneManager;
+        menu.ChangeTitle(currentScene.SceneTitle);
         SetZoom(slider.value);
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CurrentSceneManager : MonoBehaviour
 {
+    [SerializeField] public string SceneTitle;
     [SerializeField] private float sliderMinValue;
     [SerializeField] private float sliderMaxValue;
 
@@ -18,7 +19,6 @@ public class CurrentSceneManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.SetScene(this);
-
 
         isChangingScene = false;
     }

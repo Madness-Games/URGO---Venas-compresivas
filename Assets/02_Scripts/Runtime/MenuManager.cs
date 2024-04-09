@@ -5,11 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class MenuManager : MonoBehaviour
 {
+    [SerializeField] private TextChangeFade title;
     private CanvasGroup canvasGroup;
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         DontDestroyOnLoad(this);
+    }
+
+    public void ChangeTitle(string _s)
+    {
+        title.ChangeText(_s);
     }
 
     public void SetActive()

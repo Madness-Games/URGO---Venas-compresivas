@@ -33,6 +33,9 @@ public class PinchController : MonoBehaviour
             material.SetFloat("_Transition", 0);
         }*/
 
+        if (Input.touchCount <= 0)
+            return;
+
         if (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved)
         {
             curDist = Input.GetTouch(0).position - Input.GetTouch(1).position;
