@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class PinchController : MonoBehaviour
 {
     [SerializeField] private Material material;
+    [SerializeField] private Texture DefaultTexture;
+    [SerializeField] private Texture PinchTexture;
+    [SerializeField] private VideoPlayer vpDefault;
+    [SerializeField] private VideoPlayer vpPinch;
+
+    [SerializeField] private RawImage defaultImage;
+    [SerializeField] private RawImage pinchImage;
 
     private Vector2 curDist;
     private Vector2 prevDist;
@@ -17,7 +26,7 @@ public class PinchController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ShowPressed(false);
     }
 
     // Update is called once per frame
@@ -55,8 +64,15 @@ public class PinchController : MonoBehaviour
     {
         int _i = _b ? 1 : 0;
 
-        Debug.Log(_b + "--" + _i);
-
-        material.SetFloat("_Transition", _i);
+        if (_b)
+        {
+            defaultImage.enabled = false;
+            pinchImage.enabled = true;
+        } 
+        else
+        {
+            defaultImage.enabled = true;
+            pinchImage.enabled = false;
+        }
     }
 }

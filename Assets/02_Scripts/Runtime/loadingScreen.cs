@@ -7,7 +7,11 @@ public class loadingScreen : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     [SerializeField] private float fadeTime;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
     void Start()
     {
         DontDestroyOnLoad(this);

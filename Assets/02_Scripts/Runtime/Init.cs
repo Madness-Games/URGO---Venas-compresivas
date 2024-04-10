@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Init : MonoBehaviour
 {
-    [SerializeField] private VideoURLSolver[] videos;
     private float progress;
     private bool isChangingScene;
     // Start is called before the first frame update
-    private void Start()
+    IEnumerator Start()
     {
-        //yield return new WaitForSeconds(0.1f);
-        //SceneChanger.Instace.ChangeScene("01_MainScene");
+        yield return new WaitForSeconds(0.5f);
+        SceneChanger.Instace.ChangeScene("01_MainScene");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isChangingScene)
+        /*if (isChangingScene)
             return;
 
         for (int i = 0; i < videos.Length; i++)
@@ -32,6 +31,6 @@ public class Init : MonoBehaviour
         {
             SceneChanger.Instace.ChangeScene("01_MainScene");
             isChangingScene = true;
-        }
+        }*/
     }
 }

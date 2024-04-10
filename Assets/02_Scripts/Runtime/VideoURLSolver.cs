@@ -10,28 +10,23 @@ public class VideoURLSolver : MonoBehaviour
 
     [SerializeField] private string videoName;
     private VideoPlayer vp;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        string _url = Application.streamingAssetsPath+"/" + videoName;
+        string _url = Application.streamingAssetsPath + "/" + videoName;
         Debug.Log(_url);
         vp = GetComponent<VideoPlayer>();
 
         vp.url = _url;
         vp.Prepare();
-
-        DontDestroyOnLoad(this);
     }
-
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    IEnumerator Start()
     {
-        if (IsPrepared)
-            return;
-
-        if (vp.isPrepared)
+        while (!vp.isPrepared)
         {
-            IsPrepared = true;
+            yield return null;
         }
+
+        vp.Play();
     }
 }
