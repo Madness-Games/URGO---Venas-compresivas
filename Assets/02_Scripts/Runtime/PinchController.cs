@@ -23,16 +23,6 @@ public class PinchController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetMouseButton(0))
-        {
-            material.SetFloat("_Transition", 1);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            material.SetFloat("_Transition", 0);
-        }*/
-
         if (Input.touchCount <= 0)
             return;
 
@@ -46,18 +36,27 @@ public class PinchController : MonoBehaviour
 
             if ((touchDelta + varianceInDistances <= 1) && (speedTouch0 > minPinchSpeed) && (speedTouch1 > minPinchSpeed))
             {
-                material.SetFloat("_Transition", 0);
+                ShowPressed(false);
             }
 
             if ((touchDelta + varianceInDistances > 1) && (speedTouch0 > minPinchSpeed) && (speedTouch1 > minPinchSpeed))
             {
-                material.SetFloat("_Transition", 1);                
+                ShowPressed();               
             }
         }
 
         if (Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            material.SetFloat("_Transition", 0);
+            ShowPressed(false);
         }
+    }
+
+    public void ShowPressed(bool _b = true)
+    {
+        int _i = _b ? 1 : 0;
+
+        Debug.Log(_b + "--" + _i);
+
+        material.SetFloat("_Transition", _i);
     }
 }
