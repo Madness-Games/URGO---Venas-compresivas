@@ -12,6 +12,7 @@ public class InfoPanelController : MonoBehaviour
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;
     }
 
     public void SetActive(bool _active = true)

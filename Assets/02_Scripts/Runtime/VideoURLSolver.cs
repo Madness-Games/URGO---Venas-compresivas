@@ -6,6 +6,8 @@ using UnityEngine.Video;
 [RequireComponent(typeof(VideoPlayer))]
 public class VideoURLSolver : MonoBehaviour
 {
+    public bool IsPrepared;
+
     [SerializeField] private string videoName;
     private VideoPlayer vp;
     // Start is called before the first frame update
@@ -24,6 +26,12 @@ public class VideoURLSolver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsPrepared)
+            return;
+
+        if (vp.isPrepared)
+        {
+            IsPrepared = true;
+        }
     }
 }

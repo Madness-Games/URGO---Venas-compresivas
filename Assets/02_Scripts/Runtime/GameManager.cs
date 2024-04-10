@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private CurrentSceneManager currentScene;
     [SerializeField] private MenuManager menu;
     [SerializeField] private Slider slider;
+    [SerializeField] private loadingScreen loading;
 
     private void Awake()
     {
@@ -23,10 +24,16 @@ public class GameManager : MonoBehaviour
         currentScene = _sceneManager;
         menu.ChangeTitle(currentScene.SceneTitle);
         SetZoom(slider.value);
+        HideLoading();
     }
 
     public void SetZoom(float _value)
     {
         currentScene.CheckZoomValue(_value);
+    }
+
+    public void HideLoading()
+    {
+        loading.FadeOut();
     }
 }

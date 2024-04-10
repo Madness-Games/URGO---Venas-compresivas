@@ -19,7 +19,6 @@ public class CurrentSceneManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.SetScene(this);
-
         isChangingScene = false;
     }
 
