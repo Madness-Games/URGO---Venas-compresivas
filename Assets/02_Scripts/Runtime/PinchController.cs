@@ -6,14 +6,9 @@ using UnityEngine.UI;
 
 public class PinchController : MonoBehaviour
 {
-    [SerializeField] private Material material;
-    [SerializeField] private Texture DefaultTexture;
-    [SerializeField] private Texture PinchTexture;
-    [SerializeField] private VideoPlayer vpDefault;
-    [SerializeField] private VideoPlayer vpPinch;
-
     [SerializeField] private RawImage defaultImage;
     [SerializeField] private RawImage pinchImage;
+    [SerializeField] private RectTransform image;
 
     private Vector2 curDist;
     private Vector2 prevDist;
@@ -23,9 +18,15 @@ public class PinchController : MonoBehaviour
     private float minPinchSpeed;
     private float varianceInDistances;
 
+    private Vector3 initialPosition;
+    private Vector3 pressedPosition;
+
     // Start is called before the first frame update
     void Start()
     {
+        initialPosition = new Vector3(image.position.x, -288, image.position.z);
+        pressedPosition = new Vector3(image.position.x, 288, image.position.z);
+
         ShowPressed(false);
     }
 
@@ -66,13 +67,15 @@ public class PinchController : MonoBehaviour
 
         if (_b)
         {
-            defaultImage.enabled = false;
-            pinchImage.enabled = true;
+            image.localPosition = pressedPosition;
+            //defaultImage.enabled = false;
+            //pinchImage.enabled = true;
         } 
         else
         {
-            defaultImage.enabled = true;
-            pinchImage.enabled = false;
+            image.localPosition = initialPosition;
+            //defaultImage.enabled = true;
+            //pinchImage.enabled = false;
         }
     }
 }

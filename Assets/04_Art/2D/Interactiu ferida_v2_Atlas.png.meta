@@ -312,7 +312,7 @@ TextureImporter:
         width: 39
         height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,6 +320,27 @@ TextureImporter:
       bones: []
       spriteID: 4f642fc30cc00e444b0ba5b8d81ffdd8
       internalID: 1341392109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_LogoHigh
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1591
+        width: 714
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fccc16391a156c4594e70de8e4e5baa
+      internalID: 733368529
       vertices: []
       indices: 
       edges: []
@@ -365,6 +386,7 @@ TextureImporter:
       SPR_Indicator: 216240542
       SPR_Indicator(selected): -1150466580
       SPR_Logo: 2087432106
+      SPR_LogoHigh: 733368529
       SPR_Lupa: -1965736602
       SPR_Microscopi: -1919189868
       SPR_Slider: 355489649

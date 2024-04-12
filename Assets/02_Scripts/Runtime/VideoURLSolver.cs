@@ -17,16 +17,6 @@ public class VideoURLSolver : MonoBehaviour
         vp = GetComponent<VideoPlayer>();
 
         vp.url = _url;
-        vp.Prepare();
-    }
-    // Start is called before the first frame update
-    IEnumerator Start()
-    {
-        while (!vp.isPrepared)
-        {
-            yield return null;
-        }
-
         vp.Play();
     }
 }
