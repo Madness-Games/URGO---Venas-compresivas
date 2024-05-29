@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPrepared: 0
-  videoName: MicrocirculacioAll.mp4
+  videoName: Microcirculacio.mp4
 --- !u!1 &1766343372
 GameObject:
   m_ObjectHideFlags: 0

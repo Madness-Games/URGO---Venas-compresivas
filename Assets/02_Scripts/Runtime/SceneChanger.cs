@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] private MenuManager menu;
 
     private string nextScene;
+    public string previousScene;
 
     AsyncOperation loading;
 
@@ -34,6 +35,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeScene(string _scene)
     {
+        previousScene = nextScene;
         nextScene = _scene;
         StartCoroutine(fade.FadeIn());
         fade.onHideComplete += LoadScene;

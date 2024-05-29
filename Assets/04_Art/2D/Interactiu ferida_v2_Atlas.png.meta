@@ -333,7 +333,7 @@ TextureImporter:
         width: 714
         height: 314
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,6 +341,48 @@ TextureImporter:
       bones: []
       spriteID: 5fccc16391a156c4594e70de8e4e5baa
       internalID: 733368529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Home
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1311
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40407176d84bea40b90938add43794e
+      internalID: 1724681815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Dual
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1090
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb8bfb50d9195e4fa6af8a91e7462ca
+      internalID: 495049862
       vertices: []
       indices: 
       edges: []
@@ -382,7 +424,9 @@ TextureImporter:
       Interactiu ferida_v2_Atlas_7: -1655111109
       Interactiu ferida_v2_Atlas_8: -1371490327
       Interactiu ferida_v2_Atlas_9: -221899415
+      SPR_Dual: 495049862
       SPR_Eye: -397459446
+      SPR_Home: 1724681815
       SPR_Indicator: 216240542
       SPR_Indicator(selected): -1150466580
       SPR_Logo: 2087432106

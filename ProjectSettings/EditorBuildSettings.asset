@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/03_Microcirculacio.unity
     guid: e26f45f71305f354da87f4eee83113ff
+  - enabled: 1
+    path: Assets/01_Scenes/04_Comparacio.unity
+    guid: b815ec9ea88396d4493d25ba2770388f
   m_configObjects: {}
