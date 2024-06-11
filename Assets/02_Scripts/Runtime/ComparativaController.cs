@@ -18,6 +18,16 @@ public class ComparativaController : MonoBehaviour
 
     public void Quit()
     {
-        SceneChanger.Instace.ChangeScene(SceneChanger.Instace.previousScene);
+        SceneChanger.Instace.ChangeScene(SceneChanger.Instace.previousScene );
+    }
+
+    public void Temps()
+    {
+        SceneChanger.Instace.ChangeSceneExtra("05_Temps");
+    }
+
+    public void Return()
+    {
+        SceneChanger.Instace.ChangeSceneExtra("04_Comparacio");
     }
 }

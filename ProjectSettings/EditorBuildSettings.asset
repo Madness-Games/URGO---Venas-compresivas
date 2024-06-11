@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/04_Comparacio.unity
     guid: b815ec9ea88396d4493d25ba2770388f
+  - enabled: 1
+    path: Assets/01_Scenes/05_Temps.unity
+    guid: 2de19175fd53d7d44add3489accd9eec
   m_configObjects: {}

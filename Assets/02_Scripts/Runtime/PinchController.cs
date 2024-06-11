@@ -9,6 +9,7 @@ public class PinchController : MonoBehaviour
     [SerializeField] private RawImage defaultImage;
     [SerializeField] private RawImage pinchImage;
     [SerializeField] private RectTransform image;
+    [SerializeField] private Image pinchIndicator;
 
     private Vector2 curDist;
     private Vector2 prevDist;
@@ -20,6 +21,8 @@ public class PinchController : MonoBehaviour
 
     private Vector3 initialPosition;
     private Vector3 pressedPosition;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +70,7 @@ public class PinchController : MonoBehaviour
 
         if (_b)
         {
+            pinchIndicator.enabled = false;
             image.localPosition = pressedPosition;
             //defaultImage.enabled = false;
             //pinchImage.enabled = true;

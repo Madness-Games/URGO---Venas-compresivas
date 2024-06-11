@@ -223,10 +223,10 @@ TextureImporter:
       name: SPR_Indicator
       rect:
         serializedVersion: 2
-        x: 751
-        y: 1913
-        width: 109
-        height: 108
+        x: 746
+        y: 1908
+        width: 118
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: SPR_Indicator(selected)
       rect:
         serializedVersion: 2
-        x: 860
-        y: 1898
-        width: 148
-        height: 150
+        x: 875
+        y: 1885
+        width: 156
+        height: 156
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,7 +354,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,7 +375,7 @@ TextureImporter:
         width: 400
         height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,6 +383,90 @@ TextureImporter:
       bones: []
       spriteID: cfb8bfb50d9195e4fa6af8a91e7462ca
       internalID: 495049862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Clock
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1174
+        width: 120
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f2d027f7c820e4a8db03047f39c48d
+      internalID: 858176485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Back
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1964
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5efadbc8c36984693b0ce7d8658697
+      internalID: -30010624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Pinch01
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1020
+        width: 160
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341ba81b28dab4e43abfb404d3d1669a
+      internalID: 375535655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_Pinch02
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 888
+        width: 160
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff1f2d828337f24f9cfe1bba3c53d7c
+      internalID: -1051202770
       vertices: []
       indices: 
       edges: []
@@ -424,6 +508,8 @@ TextureImporter:
       Interactiu ferida_v2_Atlas_7: -1655111109
       Interactiu ferida_v2_Atlas_8: -1371490327
       Interactiu ferida_v2_Atlas_9: -221899415
+      SPR_Back: -30010624
+      SPR_Clock: 858176485
       SPR_Dual: 495049862
       SPR_Eye: -397459446
       SPR_Home: 1724681815
@@ -433,6 +519,8 @@ TextureImporter:
       SPR_LogoHigh: 733368529
       SPR_Lupa: -1965736602
       SPR_Microscopi: -1919189868
+      SPR_Pinch01: 375535655
+      SPR_Pinch02: -1051202770
       SPR_Slider: 355489649
       SPR_SliderBackground: 1341392109
       SPR_Window: 1918220822

@@ -42,6 +42,14 @@ public class SceneChanger : MonoBehaviour
         menu.SetInactive();
     }
 
+    public void ChangeSceneExtra(string _scene)
+    {
+        nextScene = _scene;
+        StartCoroutine(fade.FadeIn());
+        fade.onHideComplete += LoadScene;
+        menu.SetInactive();
+    }
+
     private void LoadScene()
     {
         Debug.Log("Load Scene");
