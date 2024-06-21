@@ -27,7 +27,6 @@ public class TextChangeFade : MonoBehaviour
         {
             _t += Time.deltaTime;
             _alpha = Mathf.Lerp(1, 0, _t / fadeTime);
-            Debug.Log("ALPHA 01: "+_alpha);
             text.color = new Color(text.color.r, text.color.g, text.color.b, _alpha);
             yield return null;
         }

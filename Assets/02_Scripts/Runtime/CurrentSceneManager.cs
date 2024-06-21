@@ -10,8 +10,8 @@ public class CurrentSceneManager : MonoBehaviour
 
     [SerializeField] private CameraController cameraCtrl;
 
-    [SerializeField] private string nextScene;
-    [SerializeField] private string previousScene;
+    [SerializeField] private int nextScene;
+    [SerializeField] private int previousScene;
 
     private bool isChangingScene;
 
@@ -29,14 +29,14 @@ public class CurrentSceneManager : MonoBehaviour
 
         if (_zoom < sliderMinValue)
         {
-            if (previousScene != null)
+            if (previousScene >= 0)
                 ChangeScene(previousScene);
             return;
         }
 
         if (_zoom > sliderMaxValue)
         {
-            if (nextScene != null)  
+            if (nextScene <= 3)  
                 ChangeScene(nextScene);
             return;
         }
@@ -45,7 +45,7 @@ public class CurrentSceneManager : MonoBehaviour
             cameraCtrl.SetZoom(Mathf.InverseLerp(sliderMinValue, sliderMaxValue, _zoom));
     }
 
-    private void ChangeScene(string _scene)
+    private void ChangeScene(int _scene)
     {
         isChangingScene = true;
 

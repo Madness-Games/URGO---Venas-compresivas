@@ -36,12 +36,15 @@ public class InfoPanelController : MonoBehaviour
             canvasGroup.alpha = _alpha;
             yield return null;
         }
+        canvasGroup.blocksRaycasts = true;
     }
 
     IEnumerator fadeOut()
     {
         float _t = 0;
         float _initialAlpha = canvasGroup.alpha;
+
+        canvasGroup.blocksRaycasts = false;
 
         while (_t < fadeTime)
         {

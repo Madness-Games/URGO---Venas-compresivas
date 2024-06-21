@@ -10,7 +10,7 @@ public class Init : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneChanger.Instace.ChangeScene("01_MainScene");
+        SceneChanger.Instace.ChangeScene(1);
     }
 
     // Update is called once per frame

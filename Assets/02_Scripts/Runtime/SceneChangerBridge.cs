@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneChangerBridge : MonoBehaviour
 {
-    public void ChangeScene(string _scene)
+    public void ChangeScene(int _scene)
     {
         SceneChanger.Instace.ChangeScene(_scene);
     }

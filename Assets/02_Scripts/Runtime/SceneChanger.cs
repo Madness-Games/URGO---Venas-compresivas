@@ -11,9 +11,9 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] private float fadeTime;
     [SerializeField] private MenuManager menu;
 
-    private string nextScene;
-    public string previousScene;
-
+    private int nextScene;
+    public int previousScene;
+    
     AsyncOperation loading;
 
     public bool isSceneActive { get; private set; }
@@ -33,18 +33,44 @@ public class SceneChanger : MonoBehaviour
         if (loading == null)
             return;
     }
-    public void ChangeScene(string _scene)
+    public void ChangeScene(int _scene)
     {
         previousScene = nextScene;
         nextScene = _scene;
+        if (nextScene > previousScene)
+        {
+            Transition.Instance.Setup(previousScene);
+            Transition.Instance.DoTransitionForward();
+            Debug.Log("Forward");
+        } else
+        {
+            Transition.Instance.Setup(nextScene);
+            Transition.Instance.DoTransitionBackward();
+            Debug.Log("Backward");
+        }
         StartCoroutine(fade.FadeIn());
         fade.onHideComplete += LoadScene;
         menu.SetInactive();
     }
 
-    public void ChangeSceneExtra(string _scene)
+    public void ChangeSceneExtra(int _scene)
     {
+
+        if (nextScene > _scene)
+        {
+            Transition.Instance.Setup(nextScene);
+            Transition.Instance.DoTransitionForward();
+            Debug.Log("Forward");
+        }
+        else
+        {
+            Transition.Instance.Setup(nextScene);
+            Transition.Instance.DoTransitionBackward();
+            Debug.Log("Backward");
+        }
+
         nextScene = _scene;
+
         StartCoroutine(fade.FadeIn());
         fade.onHideComplete += LoadScene;
         menu.SetInactive();
@@ -60,6 +86,7 @@ public class SceneChanger : MonoBehaviour
     private void Loading_completed(AsyncOperation obj)
     {
         Debug.Log("Loading complete");
+        Transition.Instance.DoDisolve();
         StartCoroutine(fade.FadeOut());
         fade.onShowComplete += menu.SetActive;
         fade.onHideComplete -= LoadScene;
