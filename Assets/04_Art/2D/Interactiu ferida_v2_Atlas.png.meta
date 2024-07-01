@@ -480,7 +480,7 @@ TextureImporter:
         width: 125
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,6 +488,48 @@ TextureImporter:
       bones: []
       spriteID: 33588843ac97f4742be7ff0e810ab41f
       internalID: -726547945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_newBackground
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 659
+        width: 968
+        height: 645
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 100, y: 100, z: 100, w: 100}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84fef4258acf20488524a7ec8c986e8
+      internalID: 474621599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_SolidCircle
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1212
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23f5a7605551f2499f0b4083c146abf
+      internalID: 1895201192
       vertices: []
       indices: 
       edges: []
@@ -544,8 +586,10 @@ TextureImporter:
       SPR_Pinch02: -1051202770
       SPR_Slider: 355489649
       SPR_SliderBackground: 1341392109
+      SPR_SolidCircle: 1895201192
       SPR_Window: 1918220822
       SPR_close: -726547945
+      SPR_newBackground: 474621599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
