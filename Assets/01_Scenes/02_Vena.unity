@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneTitle: VENAS
   sliderMinValue: 0.45
-  sliderMaxValue: 0.75
+  sliderMaxValue: 0.95
   cameraCtrl: {fileID: 961739754}
   nextScene: 3
   previousScene: 1

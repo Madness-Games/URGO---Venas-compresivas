@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneTitle: "MICROCIRCULACI\xD3N"
-  sliderMinValue: 0.75
+  sliderMinValue: 0.95
   sliderMaxValue: 1
   cameraCtrl: {fileID: 961739754}
   nextScene: 0
