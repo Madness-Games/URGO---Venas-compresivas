@@ -7,6 +7,9 @@ public class CurrentSceneManager : MonoBehaviour
     [SerializeField] public string SceneTitle;
     [SerializeField] private float sliderMinValue;
     [SerializeField] private float sliderMaxValue;
+    [SerializeField] private float sliderDefaultFloorValue;
+    [SerializeField] private float sliderDefaultTopValue;
+
 
     [SerializeField] private CameraController cameraCtrl;
 
@@ -19,6 +22,13 @@ public class CurrentSceneManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.SetScene(this);
+
+        float position = Mathf.InverseLerp(sliderMinValue, sliderMaxValue, GameManager.Instance.GetSliderValue());
+        if (position < 0.5)
+            GameManager.Instance.SetSliderValue(sliderDefaultFloorValue);
+        else
+            GameManager.Instance.SetSliderValue(sliderDefaultTopValue);
+
         isChangingScene = false;
     }
 

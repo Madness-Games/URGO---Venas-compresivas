@@ -263,6 +263,8 @@ MonoBehaviour:
   SceneTitle: "MICROCIRCULACI\xD3N"
   sliderMinValue: 0.95
   sliderMaxValue: 1
+  sliderDefaultFloorValue: 1
+  sliderDefaultTopValue: 1
   cameraCtrl: {fileID: 961739754}
   nextScene: 0
   previousScene: 2
@@ -565,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &985397347
 MonoBehaviour:
   m_ObjectHideFlags: 0

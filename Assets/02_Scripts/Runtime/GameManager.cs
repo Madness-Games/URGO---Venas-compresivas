@@ -36,4 +36,14 @@ public class GameManager : MonoBehaviour
     {
         loading.FadeOut();
     }
+
+    public void SetSliderValue(float _value)
+    {
+        slider.value = _value;
+    }
+
+    public float GetSliderValue()
+    {
+        return slider.value;
+    }
 }

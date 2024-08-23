@@ -421,6 +421,8 @@ MonoBehaviour:
   SceneTitle: VENAS
   sliderMinValue: 0.45
   sliderMaxValue: 0.95
+  sliderDefaultFloorValue: 0.5
+  sliderDefaultTopValue: 0.9
   cameraCtrl: {fileID: 961739754}
   nextScene: 3
   previousScene: 1
@@ -469,7 +471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &502437374
 MonoBehaviour:
   m_ObjectHideFlags: 0
