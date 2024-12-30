@@ -11,6 +11,8 @@ public class Transition : MonoBehaviour
     [SerializeField] private Image transitionImg;
     [SerializeField] private Sprite[] transitionSprite;
 
+    [SerializeField] private CanvasGroup loading;
+
     private void Awake()
     {
         if (Instance == null) { Instance = this; } else { Destroy(this); }
@@ -31,16 +33,22 @@ public class Transition : MonoBehaviour
 
     public void DoTransitionForward()
     {
+        loading.alpha = 1;
         animator.SetTrigger("transitionForward");
     }
 
     public void DoTransitionBackward()
     {
+        loading.alpha = 1;
         animator.SetTrigger("transitionBackward");
     }
 
     public void DoDisolve()
     {
+        loading.alpha = 0;
+
+        animator.ResetTrigger("transitionForward");
+        animator.ResetTrigger("transitionBackward");
         animator.SetTrigger("sceneLoaded");
     }
 

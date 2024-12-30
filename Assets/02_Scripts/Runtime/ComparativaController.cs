@@ -13,7 +13,7 @@ public class ComparativaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Transition.Instance.DoDisolve();
     }
 
     // Update is called once per frame

@@ -53,6 +53,27 @@ public class SceneChanger : MonoBehaviour
         menu.SetInactive();
     }
 
+    public void JumpScene(int _scene)
+    {
+        previousScene = nextScene;
+        nextScene = _scene;
+        if (nextScene > previousScene)
+        {
+            Transition.Instance.Setup(0);
+            Transition.Instance.DoTransitionForward();
+            Debug.Log("Forward");
+        }
+        else
+        {
+            Transition.Instance.Setup(0);
+            Transition.Instance.DoTransitionBackward();
+            Debug.Log("Backward");
+        }
+        StartCoroutine(fade.FadeIn());
+        fade.onHideComplete += LoadScene;
+        menu.SetInactive();
+    }
+
     public void ChangeSceneExtra(int _scene)
     {
 
@@ -86,7 +107,7 @@ public class SceneChanger : MonoBehaviour
     private void Loading_completed(AsyncOperation obj)
     {
         Debug.Log("Loading complete");
-        Transition.Instance.DoDisolve();
+        //Transition.Instance.DoDisolve();
         StartCoroutine(fade.FadeOut());
         fade.onShowComplete += menu.SetActive;
         fade.onHideComplete -= LoadScene;

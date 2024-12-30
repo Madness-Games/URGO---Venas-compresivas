@@ -534,6 +534,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Interactiu ferida_v2_Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 905
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f40bcb9e8cffab409ae20881039eb73
+      internalID: 2030822790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -545,6 +566,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Interactiu ferida_v2_Atlas_0: 2030822790
       Interactiu ferida_v2_Atlas_11: 2100404073
       Interactiu ferida_v2_Atlas_13: -1368993557
       Interactiu ferida_v2_Atlas_14: 967447354
